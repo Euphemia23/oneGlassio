@@ -15,7 +15,7 @@ const WeatherSalesForcast = ({city, SalesForcast}) => {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios(
-                `http://localhost:3000/weather/${location}`,
+                `http://localhost:5000/weather/${location}`,
             );
             setWeatherForcast(result.data);
             console.log(result.data);

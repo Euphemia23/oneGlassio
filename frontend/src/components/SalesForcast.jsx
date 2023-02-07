@@ -24,7 +24,7 @@ const SalesForcast = ({city}) => {
     useEffect(() => {
         const fetchData = async () => {
           const result = await axios(
-            `http://localhost:3000/forecasts/${city}`,
+            `http://localhost:5000/forecasts/${city}`,
           );
           setData(cleanData(result.data));
           console.log(cleanData(result.data));

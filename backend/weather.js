@@ -12,12 +12,19 @@ async function getWeather(location) {
     }
 }
 
+function fToC(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToCel = (fTemp - 32) * 5 / 9;
+    return fToCel;
+}
+
 function averageTemp(data) {
-    return data.days.slice(1).map(day => {
-        const averageTemp = Math.round((day.tempmax + day.tempmin) / 2);
+    return data.days.map(day => {
+        const averageTemp = (day.tempmax + day.tempmin) / 2;
         return {
             date: day.datetime,
-            temp: averageTemp
+            temp: Math.round(fToC(averageTemp))
         }
     })
 }

@@ -29,7 +29,7 @@ The backend of the project is built with Node.js and Express, and uses a databas
 
  
 
-       SCHEMA_NAME=
+    SCHEMA_NAME=
     TABLE_NAME_FORECASTS=
     DB_USER=
     DB_PASSWORD=
